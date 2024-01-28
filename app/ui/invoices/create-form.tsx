@@ -12,8 +12,12 @@ import {
 import { Button } from '@/app/ui/button';
 import { createInvoice } from '@/app/lib/actions';
 
+const MyComponent: React.FC = () => {
+  return <div>Hello, world!</div>;
+};
+
 export default function Form({ customers }: { customers: CustomerField[] }) {
-  const initialState = { message: null, errors: {} };
+  const initialState = { message: 'null', errors: {} };
   const [state, dispatch] = useFormState(createInvoice, initialState);
 
   return (
